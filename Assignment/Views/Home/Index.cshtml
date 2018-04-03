@@ -1,0 +1,35 @@
+﻿@model TextService.TextStatistics
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Enter your text</h2>
+    <form method="post">
+        <p>
+            <textarea name="input" style="height: 240px; max-width: inherit; width: 100%;"></textarea>
+        </p>
+        <p>
+            <input type="submit" class="btn btn-default" value="Submit &raquo;"/>
+        </p>
+    </form>
+</div>
+
+@if (this.Model != null)
+{
+    <h3>Statistics</h3>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Words</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>@this.Model.WordsCount</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+}
