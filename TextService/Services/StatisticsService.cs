@@ -17,5 +17,15 @@ namespace TextService.Services
             Regex wordRegex = new Regex(@"[\w]+", RegexOptions.Multiline);
             return wordRegex.Matches(text).Count;
         }
+        
+        public int NumberOfHyphens(string text)
+        {
+            return text.Where(x => x == '-').Count();
+        }
+
+        public int NumberOfSpaces(string text)
+        {
+            return text.Where(x => x == ' ').Count();
+        }
     }
 }
