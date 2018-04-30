@@ -49,7 +49,12 @@ namespace Assignment.Controllers
 
         private TextStatistics GenerateStatistics(string text)
         {
-            return new TextStatistics { WordsCount = this.statisticsService.CountWords(text) };
+            return new TextStatistics 
+            { 
+                WordsCount = this.statisticsService.CountWords(text),
+                HyphensCount = this.statisticsService.NumberOfHyphens(text),
+                SpacesCount = this.statisticsService.NumberOfSpaces(text)
+            };
         }
     }
 }
