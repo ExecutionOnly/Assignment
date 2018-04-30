@@ -13,5 +13,9 @@ namespace TextService
             get;
             set;
         }
+        
+        public int HyphensCount { get; set; }
+
+        public int SpacesCount { get; set; }
     }
 }
